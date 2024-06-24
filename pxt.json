@@ -17,7 +17,8 @@
         "nezha.ts",
         "planetxai.ts",
         "background.ts",
-        "irreceiver.ts"
+        "irreceiver.ts",
+        "bot.ts"
     ],
     "testFiles": [
         "test.ts"
@@ -29,5 +30,5 @@
     "supportedTargets": [
         "microbit"
     ],
-    "preferredEditor": "blocksprj"
+    "preferredEditor": "tsprj"
 }
