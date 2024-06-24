@@ -260,6 +260,9 @@ namespace Connected {
             case DigitalRJPin.J4:
                 pin = DigitalPin.P16
                 break;
+            case DigitalRJPin.W15:
+                pin = DigitalPin.P15
+                break;
         }
         return pin
     }
@@ -906,6 +909,9 @@ namespace Connected {
                 break;
             case DigitalRJPin.J4:
                 pin = DigitalPin.P16
+                break;
+            case DigitalRJPin.W15:
+                pin = DigitalPin.P15
                 break;
         }
         let strip = new Strip();
