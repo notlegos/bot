@@ -445,6 +445,9 @@ namespace Connected {
             case DigitalRJPin.W15:
                 pin = DigitalPin.P15
                 break;
+            case DigitalRJPin.W1:
+                pin = DigitalPin.P1
+                break;
         }
         return pin
     }
@@ -464,6 +467,8 @@ namespace Connected {
         J4,
         //% block="W15"
         W15,
+        //% block="W1"
+        W1,
     }
     export enum AnalogRJPin {
         //% block="J1"

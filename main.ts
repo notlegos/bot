@@ -1,11 +1,2 @@
-basic.showIcon(IconNames.SmallHeart)
-OLED.init(128, 64)
-OLED.writeStringNewLine("goodbye, daisy.")
-let strip2 = Connected.create(Connected.DigitalRJPin.W15, 8, Connected.NeoPixelMode.RGB)
-strip2.setBrightness(5)
-strip2.showRainbow(160, 360)
-basic.forever(function () {
-    basic.pause(100)
-    strip2.rotate(1)
-    strip2.show()
-})
+let laserLevel = 1023
+let dimmingPause = 10
