@@ -1,2 +1,5 @@
-let laserLevel = 1023
-let dimmingPause = 10
+notLegos.laserToggle(notLegos.DigitalRJPin.J1, true, 1023)
+basic.pause(1000)
+notLegos.laserPulse(notLegos.DigitalRJPin.J1, 1000, 500)
+basic.pause(1000)
+notLegos.laserFade(notLegos.DigitalRJPin.J1, 2000, 0, 1023)
