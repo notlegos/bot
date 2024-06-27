@@ -1,5 +1,5 @@
 {
-    "name": "comp",
+    "name": "bot",
     "description": "",
     "dependencies": {
         "core": "*",
@@ -21,7 +21,8 @@
         "bot.ts",
         "kong.ts",
         "oled.ts",
-        "notlegos.ts"
+        "notlegos.ts",
+        "joystickBit.ts"
     ],
     "testFiles": [
         "test.ts"

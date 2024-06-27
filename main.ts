@@ -1,5 +1,5 @@
-notLegos.laserToggle(notLegos.DigitalRJPin.J1, true, 1023)
-basic.pause(1000)
-notLegos.laserPulse(notLegos.DigitalRJPin.J1, 1000, 500)
-basic.pause(1000)
-notLegos.laserFade(notLegos.DigitalRJPin.J1, 2000, 0, 1023)
+joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P12, joystickbit.ButtonType.down, function () {
+    joystickbit.Vibration_Motor(100)
+})
+radio.setGroup(80)
+joystickbit.initJoystickBit()
