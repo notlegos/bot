@@ -48,7 +48,7 @@ namespace Kong {
      * @param mode breath or off , eg: LightMode.BREATH
      */
     //% weight=90
-    //% blockId="setLightMode" block="Set light mode to %mode"
+    //% blockId="ksetLightMode" block="Set light mode to %mode"
     export function setLightMode(mode: LightMode): void {
         let buff = pins.createBuffer(4);
         switch (mode) {
@@ -86,7 +86,7 @@ namespace Kong {
     * @param light brightness, eg: 100
     */
     //% weight=89
-    //% blockId=lightIntensity block="Set light intensity to %light"
+    //% blockId=klightIntensity block="Set light intensity to %light"
     //% light.min=0 light.max=100
     export function lightIntensity(light: number): void {
         let buff = pins.createBuffer(4);
@@ -108,9 +108,9 @@ namespace Kong {
      * @param speed motor speed, eg: 100
      */
     //% weight=88
-    //% blockId=setMotorSpeed block="Set motor %motor speed to %speed"
+    //% blockId=kongSetMotorSpeed block="Set motor %motor speed to %speed"
     //% speed.min=-100 speed.max=100
-    export function setMotorSpeed(motor: MotorList, speed: number): void {
+    export function ksetMotorSpeed(motor: MotorList, speed: number): void {
         let buf = pins.createBuffer(4);
         switch (motor) {
             case MotorList.M1:
@@ -145,12 +145,12 @@ namespace Kong {
      * @param m2speed M2 motor speed, eg: -100
      */
     //% weight=87
-    //% blockId=setAllMotor block="set motor M1 speed %m1speed M2 speed %m2speed"
+    //% blockId=ksetAllMotor block="set motor M1 speed %m1speed M2 speed %m2speed"
     //% m1speed.min=-100 m1speed.max=100
     //% m2speed.min=-100 m2speed.max=100
     export function setAllMotor(m1speed: number, m2speed: number): void {
-        setMotorSpeed(MotorList.M1, m1speed)
-        setMotorSpeed(MotorList.M2, m2speed)
+        ksetMotorSpeed(MotorList.M1, m1speed)
+        ksetMotorSpeed(MotorList.M2, m2speed)
     }
 
     /*
@@ -158,18 +158,18 @@ namespace Kong {
      * @param motor A motor in the MotorList , eg: MotorList.M1
      */
     //% weight=86
-    //% blockId=stopMotor block="Stop motor %motor"
+    //% blockId=kstopMotor block="Stop motor %motor"
     export function stopMotor(motor: MotorList): void {
-        setMotorSpeed(motor, 0)
+        ksetMotorSpeed(motor, 0)
     }
     /*
      * TODO: Stop all motors, including M1 and M2.
      */
     //% weight=85
-    //% blockId=stopAllMotor  block="Stop all motor"
+    //% blockId=kstopAllMotor  block="Stop all motor"
     export function stopAllMotor(): void {
-        setMotorSpeed(MotorList.M1, 0)
-        setMotorSpeed(MotorList.M2, 0)
+        ksetMotorSpeed(MotorList.M1, 0)
+        ksetMotorSpeed(MotorList.M2, 0)
     }
 
     /*
@@ -178,7 +178,7 @@ namespace Kong {
      * @param angel Angle of servo motor , eg: 90
      */
     //% weight=84
-    //% blockId=setServoAngel block="Set servo %servo angel to %angle"
+    //% blockId=ksetServoAngel block="Set servo %servo angel to %angle"
     //% angle.shadow="protractorPicker"
     export function setServoAngel(servo: ServoList, angel: number): void {
         let buf = pins.createBuffer(4);
